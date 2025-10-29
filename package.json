@@ -1,0 +1,43 @@
+{
+  "name": "vanilla-table-enhancer",
+  "version": "1.0.0",
+  "description": "A lightweight, dependency-free vanilla JavaScript library that adds search, sort, and pagination functionality to any HTML table",
+  "main": "dist/vanilla-table-enhancer.js",
+  "style": "dist/vanilla-table-enhancer.css",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "cp src/vanilla-table-enhancer.js dist/vanilla-table-enhancer.js && cp src/vanilla-table-enhancer.css dist/vanilla-table-enhancer.css"
+  },
+  "keywords": [
+    "table",
+    "data-table",
+    "pagination",
+    "sort",
+    "search",
+    "filter",
+    "vanilla",
+    "javascript",
+    "no-dependencies",
+    "lightweight"
+  ],
+  "author": "bsekhosana",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsekhosana/vanilla-table-enhancer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bsekhosana/vanilla-table-enhancer/issues"
+  },
+  "homepage": "https://github.com/bsekhosana/vanilla-table-enhancer#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Table Enhancer - Custom Styling Example</title>
+    <link rel="stylesheet" href="../dist/vanilla-table-enhancer.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #475569;
+        }
+        tr:hover {
+            background: #f8fafc;
+        }
+
+        /* Custom styling overrides */
+        .vte-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .vte-input {
+            background: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: #333;
+        }
+
+        .vte-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .vte-input:focus {
+            outline: none;
+            border-color: white;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+        }
+
+        .vte-select {
+            background: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .vte-info {
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .vte-page {
+            background: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.2s;
+        }
+
+        .vte-page:hover:not([disabled]) {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .vte-page.active {
+            background: #fbbf24;
+            border-color: #f59e0b;
+            color: white;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-section">
+        <h1>Custom Styling Example</h1>
+        <p>This example shows how you can customize the appearance of Vanilla Table Enhancer with your own CSS.</p>
+        
+        <table id="styledTable">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Population</th>
+                    <th>Area (km²)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tokyo</td>
+                    <td>Japan</td>
+                    <td>37,468,000</td>
+                    <td>2,194</td>
+                </tr>
+                <tr>
+                    <td>Delhi</td>
+                    <td>India</td>
+                    <td>32,065,760</td>
+                    <td>1,484</td>
+                </tr>
+                <tr>
+                    <td>Shanghai</td>
+                    <td>China</td>
+                    <td>28,516,904</td>
+                    <td>6,341</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td>Brazil</td>
+                    <td>22,043,028</td>
+                    <td>1,521</td>
+                </tr>
+                <tr>
+                    <td>Mexico City</td>
+                    <td>Mexico</td>
+                    <td>21,782,378</td>
+                    <td>1,485</td>
+                </tr>
+                <tr>
+                    <td>Mumbai</td>
+                    <td>India</td>
+                    <td>20,961,472</td>
+                    <td>603</td>
+                </tr>
+                <tr>
+                    <td>Osaka</td>
+                    <td>Japan</td>
+                    <td>19,059,856</td>
+                    <td>2,214</td>
+                </tr>
+                <tr>
+                    <td>Cairo</td>
+                    <td>Egypt</td>
+                    <td>20,900,604</td>
+                    <td>606</td>
+                </tr>
+                <tr>
+                    <td>New York</td>
+                    <td>USA</td>
+                    <td>20,140,470</td>
+                    <td>8,683</td>
+                </tr>
+                <tr>
+                    <td>Beijing</td>
+                    <td>China</td>
+                    <td>20,035,455</td>
+                    <td>4,144</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Custom CSS Used</h2>
+        <p>All styling classes can be overridden. Key classes:</p>
+        <ul>
+            <li><code>.vte-bar</code> - Control bar container</li>
+            <li><code>.vte-input</code> - Search input</li>
+            <li><code>.vte-page</code> - Pagination buttons</li>
+            <li><code>.vte-page.active</code> - Active page button</li>
+        </ul>
+    </div>
+
+    <script src="../dist/vanilla-table-enhancer.js"></script>
+    <script>
+        // Enhance the table
+        VTE.enhance('#styledTable');
+    </script>
+</body>
+</html>
+

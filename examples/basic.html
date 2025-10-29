@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Table Enhancer - Basic Example</title>
+    <link rel="stylesheet" href="../dist/vanilla-table-enhancer.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #475569;
+        }
+        tr:hover {
+            background: #f8fafc;
+        }
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-section">
+        <h1>Basic Example</h1>
+        <p>This is a simple example of Vanilla Table Enhancer. The table below has search, sort, and pagination enabled by default.</p>
+        
+        <table id="exampleTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>john.doe@example.com</td>
+                    <td>Engineering</td>
+                    <td>$95,000</td>
+                    <td>2020-01-15</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>jane.smith@example.com</td>
+                    <td>Marketing</td>
+                    <td>$85,000</td>
+                    <td>2019-03-20</td>
+                </tr>
+                <tr>
+                    <td>Bob Johnson</td>
+                    <td>bob.johnson@example.com</td>
+                    <td>Sales</td>
+                    <td>$75,000</td>
+                    <td>2021-06-10</td>
+                </tr>
+                <tr>
+                    <td>Alice Williams</td>
+                    <td>alice.williams@example.com</td>
+                    <td>Engineering</td>
+                    <td>$105,000</td>
+                    <td>2018-11-05</td>
+                </tr>
+                <tr>
+                    <td>Charlie Brown</td>
+                    <td>charlie.brown@example.com</td>
+                    <td>HR</td>
+                    <td>$70,000</td>
+                    <td>2022-02-14</td>
+                </tr>
+                <tr>
+                    <td>Diana Prince</td>
+                    <td>diana.prince@example.com</td>
+                    <td>Engineering</td>
+                    <td>$110,000</td>
+                    <td>2017-09-22</td>
+                </tr>
+                <tr>
+                    <td>Edward Norton</td>
+                    <td>edward.norton@example.com</td>
+                    <td>Marketing</td>
+                    <td>$80,000</td>
+                    <td>2020-07-30</td>
+                </tr>
+                <tr>
+                    <td>Fiona Apple</td>
+                    <td>fiona.apple@example.com</td>
+                    <td>Sales</td>
+                    <td>$72,000</td>
+                    <td>2021-12-01</td>
+                </tr>
+                <tr>
+                    <td>George Clooney</td>
+                    <td>george.clooney@example.com</td>
+                    <td>Engineering</td>
+                    <td>$115,000</td>
+                    <td>2016-04-18</td>
+                </tr>
+                <tr>
+                    <td>Helen Mirren</td>
+                    <td>helen.mirren@example.com</td>
+                    <td>HR</td>
+                    <td>$78,000</td>
+                    <td>2019-10-25</td>
+                </tr>
+                <tr>
+                    <td>Ian McKellen</td>
+                    <td>ian.mckellen@example.com</td>
+                    <td>Engineering</td>
+                    <td>$120,000</td>
+                    <td>2015-08-12</td>
+                </tr>
+                <tr>
+                    <td>Julia Roberts</td>
+                    <td>julia.roberts@example.com</td>
+                    <td>Marketing</td>
+                    <td>$88,000</td>
+                    <td>2020-05-08</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Code Used</h2>
+        <pre><code>VTE.enhance('#exampleTable');</code></pre>
+    </div>
+
+    <script src="../dist/vanilla-table-enhancer.js"></script>
+    <script>
+        // Enhance the table
+        VTE.enhance('#exampleTable');
+    </script>
+</body>
+</html>
+
